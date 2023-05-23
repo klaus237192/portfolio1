@@ -1,0 +1,25 @@
+{
+  "parser": "babel-eslint",
+  "plugins": ["react", "chai-expect", "chai-friendly"],
+  "env": {
+    "browser": true,
+    "mocha": true,
+    "es6": true
+  },
+  "globals": {
+    "specs": true,
+    "storiesOf": true,
+  },
+  "rules": {
+    "import/no-extraneous-dependencies": [2, {}],
+    "import/no-named-as-default":[2, {}],
+    "no-unused-expressions": 0,
+    "chai-friendly/no-unused-expressions": 2,
+  },
+  "extends": ["plugin:react/recommended", "airbnb-base"],
+  "settings": {
+    "import/resolver": {
+      "webpack": {"config": "./webpack.config.js" },
+    },
+  },
+}
